@@ -9,8 +9,8 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-JAVA_HOME=~/.local/jdk-21
-PATH="$PATH:$HOME/.local/bin:$JAVA_HOME/bin"
+JAVA_HOME=$HOME/.local/jdk-21
+PATH="$PATH:$JAVA_HOME/bin"
 
 eval "$(oh-my-posh init bash --config quick-term)"
 
