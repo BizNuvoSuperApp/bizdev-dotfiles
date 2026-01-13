@@ -5,4 +5,5 @@ if [[ ! -f ~/.dotfiles.upd || $(date -r ~/.dotfiles.upd +%s) -lt $(date -d "-1 h
     touch ~/.dotfiles.upd
     cd ~/.dotfiles
     git pull
+    stow --adopt --no-folding .
 fi
