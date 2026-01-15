@@ -123,9 +123,9 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 newcronfile=$(mktemp)
 
 (
-    awk '$1 ~ /CB_MAIL/ {print; next} $1 ~ /^\s*$/ {print; next} $7 != "'${_arg_branch}'" {print}' ~/cronfile
+	grep -vE "/automation/cron-build.sh ${_arg_branch} " ~/cronfile
 
-    printf "*/3 * * * * /home/bn/automation/cron-build.sh %s 2>&1 >/home/bn/logs/%s.debug\n" ${_arg_branch} ${_arg_branch//\//-}
+    printf "*/3 * * * * /home/%s/automation/cron-build.sh %s 2>&1 >/home/%s/logs/%s.debug\n" $USER ${_arg_branch} $USER ${_arg_branch//\//-}
 ) > $newcronfile
 
 if _isOn ${_arg_dryrun} ; then
