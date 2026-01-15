@@ -1,1 +1,1 @@
-alias updatedot='updot; exec bash'
+alias editbiz='sudoedit -u biznuvo /home/biznuvo/.ssh/authorized_keys'
