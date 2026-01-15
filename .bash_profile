@@ -12,6 +12,6 @@ fi
 JAVA_HOME=$HOME/.local/jdk-21
 PATH="$PATH:$JAVA_HOME/bin"
 
-eval "$(oh-my-posh init bash --config quick-term)"
+eval "$(oh-my-posh init bash --config froczh)"
 
 # User specific environment and startup programs
