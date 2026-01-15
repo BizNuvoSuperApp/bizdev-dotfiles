@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ ! -f ~/.dotfiles.upd || $(date -r ~/.dotfiles.upd +%s) -lt $(date -d "-1 hour" +%s) ]]; then
+if [[ ! -f ~/.dotfiles.upd || $(date -r ~/.dotfiles.upd +%s) -lt $(date -d "-5 mins" +%s) ]]; then
     printf "!! Updating dotfiles !!\n"
     touch ~/.dotfiles.upd
     cd ~/.dotfiles
