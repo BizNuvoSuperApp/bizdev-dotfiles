@@ -1,1 +1,5 @@
+alias ls='ls -ksFGh'
+alias la='ls -Ac'
+alias ll='ls -lAc'
+
 alias editbiz='sudoedit -u biznuvo /home/biznuvo/.ssh/authorized_keys'
