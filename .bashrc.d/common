@@ -1,5 +1,11 @@
-alias ls='ls -ksFGh'
-alias la='ls -Ac'
-alias ll='ls -lAc'
+# makes ls sort with dotfiles first, then regular files, if they are listed
+export LC_ALL=POSIX
 
+# Display ls with color, 1024k blocks, add classification text for filetype, no group on long listings, and use human readable text
+alias l='\ls --color=auto -ksFGh'
+alias ls='l'
+alias la='l -A'
+alias ll='la -l'
+
+# edit the biznuvo authorized keys files to add a user's ssh info
 alias editbiz='sudoedit -u biznuvo /home/biznuvo/.ssh/authorized_keys'
